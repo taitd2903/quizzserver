@@ -1,0 +1,46 @@
+[
+  {
+    "question": "Thủ đô của Việt Nam là gì?",
+    "options": ["Hà Nội", "TP.HCM", "Đà Nẵng", "Huế"],
+    "correct": "Hà Nội"
+  },
+  {
+    "question": "2 + 1 bằng bao nhiêu?",
+    "options": ["3", "4", "5", "6"],
+    "correct": "3"
+  },
+  {
+    "question": "Thủ đô của Việt Nam là gì?",
+    "options": ["Hà Nội", "TP.HCM", "Đà Nẵng", "Huế"],
+    "correct": "Hà Nội"
+  },
+  {
+    "question": "3 + 2 bằng bao nhiêu?",
+    "options": ["3", "4", "5", "6"],
+    "correct": "5"
+  }
+  ,
+  {
+    "question": "3 + 3 bằng bao nhiêu?",
+    "options": ["3", "4", "5", "6"],
+    "correct": "6"
+  }
+  ,
+  {
+    "question": "3 + 4 bằng bao nhiêu?",
+    "options": ["3", "4", "5", "7"],
+    "correct": "7"
+  }
+  ,
+  {
+    "question": "3 + 5 bằng bao nhiêu?",
+    "options": ["3", "4", "5", "8"],
+    "correct": "8"
+  }
+  ,
+  {
+    "question": "3 + 6 bằng bao nhiêu?",
+    "options": ["1", "9", "5", "6"],
+    "correct": "9"
+  }
+]
