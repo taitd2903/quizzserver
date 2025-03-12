@@ -69,30 +69,53 @@ io.on("connection", (socket) => {
 
   // Chuyển sang câu hỏi tiếp theo
   socket.on("nextQuestion", () => {
+    let totalCorrect = 0;
+    let totalWrong = 0;
+    let playerAnswers = [];  // Danh sách câu trả lời của từng người chơi
+    let correctAnswer = questions[questionIndex].correct; // Đáp án đúng của câu hỏi hiện tại
+
     players.forEach((player) => {
-      if (pendingAnswers[player.name]?.answer === questions[questionIndex].correct) {
-        player.score += 1;
-        player.totalTime = (player.totalTime || 0) + pendingAnswers[player.name].time;
-      }
+        let playerAnswer = pendingAnswers[player.name]?.answer || "Không trả lời"; // Lấy câu trả lời hoặc ghi nhận "Không trả lời"
+
+        playerAnswers.push({
+            name: player.name,
+            answer: playerAnswer
+        });
+
+        if (playerAnswer === correctAnswer) {
+            player.score += 1;
+            player.totalTime = (player.totalTime || 0) + pendingAnswers[player.name].time;
+            totalCorrect++;
+        } else {
+            totalWrong++;
+        }
     });
 
     writePlayersToFile(players);
     io.emit("players", players);
+
+    // Gửi thống kê cùng với câu trả lời đúng và câu trả lời của từng người chơi
+    io.emit("questionStats", { 
+        totalCorrect, 
+        totalWrong, 
+        correctAnswer, 
+        playerAnswers 
+    });
+
     pendingAnswers = {};
 
     if (questionIndex < questions.length - 1) {
-      questionIndex++;
-      questionStartTime = Date.now();
-      io.emit("nextQuestion", questions[questionIndex]);
+        questionIndex++;
+        questionStartTime = Date.now();
+        io.emit("nextQuestion", questions[questionIndex]);
     } else {
-      // Xếp hạng top 3 người chơi
-      const topPlayers = [...players]
-        .sort((a, b) => b.score - a.score || a.totalTime - b.totalTime)
-        .slice(0, 3);
+        const topPlayers = [...players]
+            .sort((a, b) => b.score - a.score || a.totalTime - b.totalTime)
+            .slice(0, 3);
 
-      io.emit("finish", { topPlayers });
+        io.emit("finish", { topPlayers });
     }
-  });
+});
 
   // Reset lại game
   socket.on("resetGame", () => {
