@@ -1,5 +1,11 @@
 [
   {
+    "question": "Nghe đoạn âm thanh sau và cho biết đó bài hát nào?",
+    "audio": "MatKetNoi-DuongDomic-16783113.mp3",
+    "options": ["Mất Kết Nối", "Đừng quên tên anh", "Lệ cay", "Cầu vồng khuyết"],
+    "correct": "Mất Kết Nối"
+  },
+  {
     "question": "I’m a freelance graphic designer. I create branding materials such as logos, websites, and social media graphics for startups. I also work with established businesses to update their brand identity. I have a degree in graphic design and have been working in the industry for over 10 years. I’m passionate about helping businesses grow through effective design. What am I?",
     "options": ["A web developer", "A graphic designer", "A social media manager", "A content writer"],
     "correct": "A graphic designer"
