@@ -52,7 +52,16 @@ io.on("connection", (socket) => {
   socket.on("startGame", () => {
     questionIndex = 0;
     questionStartTime = Date.now();
-    io.emit("startGame", questions[questionIndex]);
+    const question = questions[questionIndex];
+    
+    io.emit("startGame", { 
+        question: question.question, 
+        options: question.options, 
+        image: question.image || null, 
+        audio: question.audio || null 
+    });
+
+
   });
 
   // Nhận câu trả lời của người chơi
@@ -105,16 +114,25 @@ io.on("connection", (socket) => {
     pendingAnswers = {};
 
     if (questionIndex < questions.length - 1) {
-        questionIndex++;
-        questionStartTime = Date.now();
-        io.emit("nextQuestion", questions[questionIndex]);
-    } else {
-        const topPlayers = [...players]
-            .sort((a, b) => b.score - a.score || a.totalTime - b.totalTime)
-            .slice(0, 3);
-
-        io.emit("finish", { topPlayers });
-    }
+      questionIndex++;
+      questionStartTime = Date.now();
+      
+      // Gửi câu hỏi tiếp theo
+      io.emit("nextQuestion", { 
+          question: questions[questionIndex].question, 
+          options: questions[questionIndex].options ,
+          image: questions[questionIndex].image || "", 
+          audio: questions[questionIndex].audio || ""  
+      });
+  } else {
+      // Kết thúc quiz
+      const topPlayers = [...players]
+          .sort((a, b) => b.score - a.score || a.totalTime - b.totalTime)
+          .slice(0, 3);
+  
+      io.emit("finish", { topPlayers });
+  }
+  
 });
 
   // Reset lại game

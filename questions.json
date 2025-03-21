@@ -1,6 +1,12 @@
 [
   {
+    "question": "I’m a freelance graphic designer. I create branding materials such as logos, websites, and social media graphics for startups. I also work with established businesses to update their brand identity. I have a degree in graphic design and have been working in the industry for over 10 years. I’m passionate about helping businesses grow through effective design. What am I?",
+    "options": ["A web developer", "A graphic designer", "A social media manager", "A content writer"],
+    "correct": "A graphic designer"
+  },
+  {
     "question": "Thủ đô của Việt Nam là gì?",
+    "image": "https://condao.com.vn/uploads/photos/images/2019/10/hinh-anh-dep/img-20190827-074719-1.jpg",
     "options": ["Hà Nội", "TP.HCM", "Đà Nẵng", "Huế"],
     "correct": "Hà Nội"
   },
@@ -10,34 +16,38 @@
     "correct": "3"
   },
   {
-    "question": "Thủ đô của Việt Nam là gì?",
-    "options": ["Hà Nội", "TP.HCM", "Đà Nẵng", "Huế"],
-    "correct": "Hà Nội"
+    "question": "Nghe đoạn âm thanh sau và cho biết đó bài hát nào?",
+    "audio": "MatKetNoi-DuongDomic-16783113.mp3",
+    "options": ["Mất Kết Nối", "Đừng quên tên anh", "Lệ cay", "Cầu vồng khuyết"],
+    "correct": "Mất Kết Nối"
   },
   {
     "question": "3 + 2 bằng bao nhiêu?",
     "options": ["3", "4", "5", "6"],
     "correct": "5"
-  }
-  ,
+  },
+
   {
     "question": "3 + 3 bằng bao nhiêu?",
     "options": ["3", "4", "5", "6"],
     "correct": "6"
-  }
-  ,
+  },
+  {
+    "question": "Đây là con vật gì?",
+    "image": "https://example.com/dog.jpg",
+    "options": ["Chó", "Mèo", "Voi", "Khỉ"],
+    "correct": "Chó"
+  },
   {
     "question": "3 + 4 bằng bao nhiêu?",
     "options": ["3", "4", "5", "7"],
     "correct": "7"
-  }
-  ,
+  },
   {
     "question": "3 + 5 bằng bao nhiêu?",
     "options": ["3", "4", "5", "8"],
     "correct": "8"
-  }
-  ,
+  },
   {
     "question": "3 + 6 bằng bao nhiêu?",
     "options": ["1", "9", "5", "6"],
