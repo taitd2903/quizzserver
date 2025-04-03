@@ -1,62 +1,96 @@
 [
   {
-    "question": "Nghe đoạn âm thanh sau và cho biết đó bài hát nào?",
-    "audio": "MatKetNoi-DuongDomic-16783113.mp3",
-    "options": ["Mất Kết Nối", "Đừng quên tên anh", "Lệ cay", "Cầu vồng khuyết"],
-    "correct": "Mất Kết Nối"
+    "question": "Which of the following is NOT a place you typically find in a city?",
+    "options": ["Library", "Skyscraper", "Jungle", "Museum"],
+    "correct": "Jungle"
   },
   {
-    "question": "I’m a freelance graphic designer. I create branding materials such as logos, websites, and social media graphics for startups. I also work with established businesses to update their brand identity. I have a degree in graphic design and have been working in the industry for over 10 years. I’m passionate about helping businesses grow through effective design. What am I?",
-    "options": ["A web developer", "A graphic designer", "A social media manager", "A content writer"],
-    "correct": "A graphic designer"
+    "question": "Unscramble the word in bold \n Social media platforms allow people to access global <b>ioorinfmatn</b> and connect with friends and family at a distance. ",
+    "options": [
+      "forimnation",
+      "information",
+      "mornifotani",
+      "nifotmarino"
+    ],
+    "correct": "information"
   },
   {
-    "question": "Thủ đô của Việt Nam là gì?",
-    "image": "https://condao.com.vn/uploads/photos/images/2019/10/hinh-anh-dep/img-20190827-074719-1.jpg",
-    "options": ["Hà Nội", "TP.HCM", "Đà Nẵng", "Huế"],
-    "correct": "Hà Nội"
+    "question": "Complete the following idiom: \nBeauty is only ______  deep.",
+    "options": ["blood", "eye", "skin", "heart"],
+    "correct": "skin"
   },
   {
-    "question": "2 + 1 bằng bao nhiêu?",
-    "options": ["3", "4", "1", "6"],
-    "correct": "3"
+    "question": "Complete the sentence with the correct form of the verb: \nI need to have my car (repair) ________ before the road trip.",
+    "options": ["repair", "repairing", "repaired", "repairs"],
+    "correct": "repaired"
   },
   {
-    "question": "Nghe đoạn âm thanh sau và cho biết đó bài hát nào?",
-    "audio": "MatKetNoi-DuongDomic-16783113.mp3",
-    "options": ["Mất Kết Nối", "Đừng quên tên anh", "Lệ cay", "Cầu vồng khuyết"],
-    "correct": "Mất Kết Nối"
+    "question": "Choose the correct form of the verb in brackets: \nThe government’s __________ (decide) on the new policy caused a lot of debates.",
+    "options": ["decided", "decisive", "decision", "decides"],
+    "correct": "decision"
   },
 
+{
+  "question": "Complete the sentence with the correct verb form: \nIf he (not waste) so much time last year, he would have a better job now.",
+  "options": [
+    "had not wasted",
+    "did not waste",
+    "has not wasted",
+    "would not waste"
+  ],
+  "correct": "had not wasted"
+}
+,
   {
-    "question": "3 + 3 bằng bao nhiêu?",
-    "options": ["3", "4", "5", "6"],
-    "correct": "6"
+    "question": "Listen and fill in the blank:\nThe speaker gives directions to the _____",
+    "image": "qto7.jpg",
+    "audio": "Direction.mp3",
+    "options": ["post office", "library", "shop", "cinema"],
+    "correct": "post office"
   },
   {
-    "question": "Đây là con vật gì?",
-    "image": "https://example.com/dog.jpg",
-    "options": ["Chó", "Mèo", "Voi", "Khỉ"],
-    "correct": "Chó"
+    "question": "Listen and choose the correct picture. \nWhat is Mia doing today?",
+    "image": "Q8.png",
+    "audio": "Question8.mp3",
+    "options": ["swim", "ride a bike", "dance", "other"],
+    "correct": "ride a bike"
   },
   {
-    "question": "3 + 4 bằng bao nhiêu?",
-    "options": ["3", "4", "5", "7"],
-    "correct": "7"
+    "question": "Listen to the song and fill in with the missing words\nI wanna come home to roses\nAnd dirty little notes on Post-its\nAnd when my hair starts turning gray\nHe'll say I'm like a fine wine, better with ___________",
+   
+    "audio": "Question9.mp3",
+    "options": ["age", "time", "love", "grace"],
+    "correct": "age"
   },
   {
-    "question": "3 + 5 bằng bao nhiêu?",
-    "options": ["3", "4", "5", "8"],
-    "correct": "8"
+    "question": "Which brand has this slogan?\n'Just Do It'",
+
+    "options": ["Nike", "Adidas", "Puma", "Reebok"],
+    "correct": "Nike"
   },
   {
-    "question": "3 + 6 bằng bao nhiêu?",
-    "options": ["1", "9", "5", "6"],
-    "correct": "9"
+    "question": "Watch the video and anwer the question?\nWhere is it? ",
+   
+    "video": "HoiAn.mp4",
+    "options": ["Hoi An", "Ha Long Bay", "Hue", "Da Nang"],
+    "correct": "Hoi An"
   },
   {
-    "question": "1 + 11 bằng bao nhiêu?",
-    "options": ["12", "9", "5", "6"],
-    "correct": "12"
+    "question": "In the Windows operating system, which default function key we press when we want to refresh or reload a web page?",
+
+    "options": ["F4", "F5", "F9", "F12"],
+    "correct": "F5"
+  },
+  {
+    "question": "What day is October 20th every year?",
+
+    "options": ["Children's Day", "Teacher's Day", "Independence Day", "Vietnamese Women's Day"],
+    "correct": "Vietnamese Women's Day"
+  }
+  ,
+  {
+    "question": "(a) Cindy: Cool. What's the national costume?\n(b) Phong: It's Hanoi. It's a stunning city.\n(c) Cindy: Do you mind if I ask you some questions about Vietnam?\n(d) Phong: Sure!\n(e) Cindy: Thanks. What's the capital city of Vietnam?",
+    "options": ["e – b – a – d – a", "a – d – e – b – a", "c – d – e – b – a", "c – d – a – b – e"],
+    "correct": "c – d – e – b – a"
   }
 ]
