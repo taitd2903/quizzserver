@@ -32,7 +32,6 @@ const writePlayersToFile = (players) => {
   fs.writeFileSync(filePath, JSON.stringify(players, null, 2), "utf8");
 };
 
-// Biến lưu trạng thái trò chơi
 let players = readPlayersFromFile();
 let questionIndex = 0;
 let pendingAnswers = {};
@@ -48,7 +47,6 @@ io.on("connection", (socket) => {
     io.emit("players", players);
   });
 
-  // Bắt đầu quiz
   socket.on("startGame", () => {
     questionIndex = 0;
     questionStartTime = Date.now();
@@ -58,13 +56,13 @@ io.on("connection", (socket) => {
         question: question.question, 
         options: question.options, 
         image: question.image || null, 
-        audio: question.audio || null 
+        audio: question.audio || null ,
+        video: question.video || null  
     });
 
 
   });
 
-  // Nhận câu trả lời của người chơi
   socket.on("answer", ({ name, answer }) => {
     const currentTime = Date.now() - questionStartTime;
 
@@ -76,7 +74,6 @@ io.on("connection", (socket) => {
     }
   });
 
-  // Chuyển sang câu hỏi tiếp theo
   socket.on("nextQuestion", () => {
     let totalCorrect = 0;
     let totalWrong = 0;
@@ -92,7 +89,7 @@ io.on("connection", (socket) => {
         });
 
         if (playerAnswer === correctAnswer) {
-            player.score += 1;
+            player.score += 10;
             player.totalTime = (player.totalTime || 0) + pendingAnswers[player.name].time;
             totalCorrect++;
         } else {
@@ -122,7 +119,8 @@ io.on("connection", (socket) => {
           question: questions[questionIndex].question, 
           options: questions[questionIndex].options ,
           image: questions[questionIndex].image || "", 
-          audio: questions[questionIndex].audio || ""  
+          audio: questions[questionIndex].audio || "" ,
+          video: questions[questionIndex].video || ""  
       });
   } else {
       // Kết thúc quiz
