@@ -1,17 +1,12 @@
 [
   {
     "question": "Which of the following is NOT a place you typically find in a city?",
-    "options": ["Library", "Skyscraper", "Jungle", "Museum"],
+
     "correct": "Jungle"
   },
   {
     "question": "Unscramble the word in bold \n Social media platforms allow people to access global <b>ioorinfmatn</b> and connect with friends and family at a distance. ",
-    "options": [
-      "forimnation",
-      "information",
-      "mornifotani",
-      "nifotmarino"
-    ],
+   
     "correct": "information"
   },
   {
