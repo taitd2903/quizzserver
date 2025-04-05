@@ -47,17 +47,19 @@ io.on("connection", (socket) => {
     io.emit("players", players);
   });
 
+
   socket.on("startGame", () => {
     questionIndex = 0;
     questionStartTime = Date.now();
     const question = questions[questionIndex];
-    
+    const isFillIn = !question.options || question.options.length === 0;
     io.emit("startGame", { 
         question: question.question, 
         options: question.options, 
         image: question.image || null, 
         audio: question.audio || null ,
-        video: question.video || null  
+        video: question.video || null ,
+        type: isFillIn ? "fill" : "multiple" 
     });
 
 
@@ -77,8 +79,10 @@ io.on("connection", (socket) => {
   socket.on("nextQuestion", () => {
     let totalCorrect = 0;
     let totalWrong = 0;
-    let playerAnswers = [];  // Danh sách câu trả lời của từng người chơi
-    let correctAnswer = questions[questionIndex].correct; // Đáp án đúng của câu hỏi hiện tại
+    let playerAnswers = [];  
+    const question = questions[questionIndex];
+    const correctAnswer = (question.correct || "").trim().toLowerCase();
+    const isFillIn = !question.options || question.options.length === 0;
 
     players.forEach((player) => {
         let playerAnswer = pendingAnswers[player.name]?.answer || "Không trả lời"; // Lấy câu trả lời hoặc ghi nhận "Không trả lời"
@@ -88,7 +92,11 @@ io.on("connection", (socket) => {
             answer: playerAnswer
         });
 
-        if (playerAnswer === correctAnswer) {
+        if (
+          isFillIn
+          ? playerAnswer.trim().toLowerCase() === correctAnswer
+          : playerAnswer === correctAnswer
+        ) {
             player.score += 10;
             player.totalTime = (player.totalTime || 0) + pendingAnswers[player.name].time;
             totalCorrect++;
@@ -113,14 +121,16 @@ io.on("connection", (socket) => {
     if (questionIndex < questions.length - 1) {
       questionIndex++;
       questionStartTime = Date.now();
-      
+      const nextQ = questions[questionIndex];
+      const isFillIn = !nextQ.options || nextQ.options.length === 0;
       // Gửi câu hỏi tiếp theo
       io.emit("nextQuestion", { 
           question: questions[questionIndex].question, 
           options: questions[questionIndex].options ,
           image: questions[questionIndex].image || "", 
           audio: questions[questionIndex].audio || "" ,
-          video: questions[questionIndex].video || ""  
+          video: questions[questionIndex].video || ""  ,
+          type: isFillIn ? "fill" : "multiple"
       });
   } else {
       // Kết thúc quiz

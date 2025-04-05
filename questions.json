@@ -2,12 +2,12 @@
   {
     "question": "Which of the following is NOT a place you typically find in a city?",
 
-    "correct": "Jungle"
+    "correct": "JUNGLE"
   },
   {
     "question": "Unscramble the word in bold \n Social media platforms allow people to access global <b>ioorinfmatn</b> and connect with friends and family at a distance. ",
    
-    "correct": "information"
+    "correct": "INFORMATION"
   },
   {
     "question": "Complete the following idiom: \nBeauty is only ______  deep.",
@@ -16,8 +16,7 @@
   },
   {
     "question": "Complete the sentence with the correct form of the verb: \nI need to have my car (repair) ________ before the road trip.",
-    "options": ["repair", "repairing", "repaired", "repairs"],
-    "correct": "repaired"
+    "correct": "REPAIRED"
   },
   {
     "question": "Choose the correct form of the verb in brackets: \nThe government’s __________ (decide) on the new policy caused a lot of debates.",
@@ -27,21 +26,14 @@
 
 {
   "question": "Complete the sentence with the correct verb form: \nIf he (not waste) so much time last year, he would have a better job now.",
-  "options": [
-    "had not wasted",
-    "did not waste",
-    "has not wasted",
-    "would not waste"
-  ],
-  "correct": "had not wasted"
+  "correct": "HAD NOT WASTED"
 }
 ,
   {
     "question": "Listen and fill in the blank:\nThe speaker gives directions to the _____",
     "image": "qto7.jpg",
     "audio": "Direction.mp3",
-    "options": ["post office", "library", "shop", "cinema"],
-    "correct": "post office"
+    "correct": " POST OFFICE"
   },
   {
     "question": "Listen and choose the correct picture. \nWhat is Mia doing today?",
@@ -52,23 +44,18 @@
   },
   {
     "question": "Listen to the song and fill in with the missing words\nI wanna come home to roses\nAnd dirty little notes on Post-its\nAnd when my hair starts turning gray\nHe'll say I'm like a fine wine, better with ___________",
-   
     "audio": "Question9.mp3",
-    "options": ["age", "time", "love", "grace"],
-    "correct": "age"
+    "correct": "AGE"
   },
   {
     "question": "Which brand has this slogan?\n'Just Do It'",
-
-    "options": ["Nike", "Adidas", "Puma", "Reebok"],
-    "correct": "Nike"
+    "correct": "NIKE"
   },
   {
     "question": "Watch the video and anwer the question?\nWhere is it? ",
    
     "video": "HoiAn.mp4",
-    "options": ["Hoi An", "Ha Long Bay", "Hue", "Da Nang"],
-    "correct": "Hoi An"
+    "correct": "HOI AN"
   },
   {
     "question": "In the Windows operating system, which default function key we press when we want to refresh or reload a web page?",
@@ -78,13 +65,11 @@
   },
   {
     "question": "What day is October 20th every year?",
-
-    "options": ["Children's Day", "Teacher's Day", "Independence Day", "Vietnamese Women's Day"],
-    "correct": "Vietnamese Women's Day"
+    "correct": "VIETNAMESE WOMEN'S DAY"
   }
   ,
   {
-    "question": "(a) Cindy: Cool. What's the national costume?\n(b) Phong: It's Hanoi. It's a stunning city.\n(c) Cindy: Do you mind if I ask you some questions about Vietnam?\n(d) Phong: Sure!\n(e) Cindy: Thanks. What's the capital city of Vietnam?",
+    "question": "Re-order the conversation: \n(a) Cindy: Cool. What's the national costume?\n(b) Phong: It's Hanoi. It's a stunning city.\n(c) Cindy: Do you mind if I ask you some questions about Vietnam?\n(d) Phong: Sure!\n(e) Cindy: Thanks. What's the capital city of Vietnam?",
     "options": ["e – b – a – d – a", "a – d – e – b – a", "c – d – e – b – a", "c – d – a – b – e"],
     "correct": "c – d – e – b – a"
   }
