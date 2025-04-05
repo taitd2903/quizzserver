@@ -1,8 +1,13 @@
 [
   {
+    "question": "What day is October 20th every year?",
+    "correct": "VIETNAMESE WOMEN‘S DAY"
+  }
+  ,
+  {
     "question": "Which of the following is NOT a place you typically find in a city?",
-
-    "correct": "JUNGLE"
+"options": ["Library", "Skyscraper", "Jungle", "Museum"],
+    "correct": "Jungle"
   },
   {
     "question": "Unscramble the word in bold \n Social media platforms allow people to access global <b>ioorinfmatn</b> and connect with friends and family at a distance. ",
@@ -65,7 +70,10 @@
   },
   {
     "question": "What day is October 20th every year?",
-    "correct": "VIETNAMESE WOMEN'S DAY"
+    "correct": "VIETNAMESE WOMEN‘S DAY"
+    
+
+
   }
   ,
   {
