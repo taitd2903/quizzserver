@@ -1,10 +1,5 @@
 [
   {
-    "question": "What day is October 20th every year?",
-    "correct": "VIETNAMESE WOMEN'S DAY"
-  }
-  ,
-  {
     "question": "Which of the following is NOT a place you typically find in a city?",
 "options": ["Library", "Skyscraper", "Jungle", "Museum"],
     "correct": "Jungle"
