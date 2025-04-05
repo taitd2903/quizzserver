@@ -69,6 +69,11 @@
   }
   ,
   {
+    "question": "Where will the 2026 FIFA World Cup be held?",
+    "options": ["France, England and Mexico", "America, Canada and Mexico", "Russia, Canada and Ameria", "Indonesia, Korea and China"],
+    "correct": "America, Canada and Mexico"
+  },
+  {
     "question": "Re-order the conversation: \n(a) Cindy: Cool. What's the national costume?\n(b) Phong: It's Hanoi. It's a stunning city.\n(c) Cindy: Do you mind if I ask you some questions about Vietnam?\n(d) Phong: Sure!\n(e) Cindy: Thanks. What's the capital city of Vietnam?",
     "options": ["e – b – a – d – a", "a – d – e – b – a", "c – d – e – b – a", "c – d – a – b – e"],
     "correct": "c – d – e – b – a"
