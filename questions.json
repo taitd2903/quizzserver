@@ -1,12 +1,11 @@
 [
   {
-    "question": "Which of the following is NOT a place you typically find in a city?",
-"options": ["Library", "Skyscraper", "Jungle", "Museum"],
-    "correct": "Jungle"
+    "question": "Which of the following is NOT a place you typically find in a city? \n",
+"options": ["library", "skyscraper", "jungle", "museum"],
+    "correct": "jungle"
   },
   {
-    "question": "Unscramble the word in bold \n Social media platforms allow people to access global <b>ioorinfmatn</b> and connect with friends and family at a distance. ",
-   
+    "question": "Unscramble the word <b>in bold</b> \n Social media platforms allow people to access global <b>ioorinfmatn</b> and connect with friends and family at a distance.",
     "correct": "INFORMATION"
   },
   {
@@ -39,11 +38,11 @@
     "question": "Listen and choose the correct picture. \nWhat is Mia doing today?",
     "image": "Q8.png",
     "audio": "Question8.mp3",
-    "options": ["swim", "ride a bike", "dance", "other"],
+    "options": ["swim", "ride a bike", "dance"],
     "correct": "ride a bike"
   },
   {
-    "question": "Listen to the song and fill in with the missing words\nI wanna come home to roses\nAnd dirty little notes on Post-its\nAnd when my hair starts turning gray\nHe'll say I'm like a fine wine, better with ___________",
+    "question": "Listen to the song and fill in the blank\nI wanna come home to roses\nAnd dirty little notes on Post-its\nAnd when my hair starts turning gray\nHe'll say I'm like a fine wine, better with ___________",
     "audio": "Question9.mp3",
     "correct": "AGE"
   },
@@ -60,21 +59,17 @@
   {
     "question": "In the Windows operating system, which default function key we press when we want to refresh or reload a web page?",
 
-    "options": ["F4", "F5", "F9", "F12"],
-    "correct": "F5"
+    "options": ["f4", "f5", "f9", "f12"],
+    "correct": "f5"
   },
   {
     "question": "What day is October 20th every year?",
-    "correct": "VIETNAMESE WOMEN‘S DAY"
-    
-
-
-  }
-  ,
+    "correct": "VIETNAMESE WOMEN'S DAY"
+  },
   {
     "question": "Where will the 2026 FIFA World Cup be held?",
-    "options": ["France, England and Mexico", "America, Canada and Mexico", "Russia, Canada and Ameria", "Indonesia, Korea and China"],
-    "correct": "America, Canada and Mexico"
+    "options": ["france, england and mexico", "america, canada and mexico", "russia, canada and ameria", "indonesia, korea and china"],
+    "correct": "america, canada and mexico"
   },
   {
     "question": "Re-order the conversation: \n(a) Cindy: Cool. What's the national costume?\n(b) Phong: It's Hanoi. It's a stunning city.\n(c) Cindy: Do you mind if I ask you some questions about Vietnam?\n(d) Phong: Sure!\n(e) Cindy: Thanks. What's the capital city of Vietnam?",
