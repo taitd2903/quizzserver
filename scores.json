@@ -1,1 +1,392 @@
-[]
+[
+    {
+      "id": 1744743593649,
+      "nguoiCham": "Giám định 1",
+      "doi": "Vovinam Sakura Kids Star 1",
+      "chiTiet": {
+        "kyThuat": 0,
+        "quyencuoc": 0,
+        "dongDeu": 0,
+        "ngheThuat": 0,
+        "tacPhong": 0
+      },
+      "thoiGian": "2025-04-15T18:59:53.649Z"
+    },
+    {
+      "id": 1744743586390,
+      "nguoiCham": "Giám định 2",
+      "doi": "Vovinam Sakura Kids Star 1",
+      "chiTiet": {
+        "kyThuat": 0,
+        "quyencuoc": 0,
+        "dongDeu": 0,
+        "ngheThuat": 0,
+        "tacPhong": 0
+      },
+      "thoiGian": "2025-04-15T18:59:46.390Z"
+    },
+    {
+      "id": 1744743525141,
+      "nguoiCham": "Giám định 3",
+      "doi": "Vovinam Sakura Kids Star 1",
+      "chiTiet": {
+        "kyThuat": 0,
+        "quyencuoc": 0,
+        "dongDeu": 0,
+        "ngheThuat": 0,
+        "tacPhong": 0
+      },
+      "thoiGian": "2025-04-15T18:58:45.141Z"
+    },
+    {
+      "id": 1744736877966,
+      "nguoiCham": "Giám định 1",
+      "doi": "Captain Kids",
+      "chiTiet": {
+        "kyThuat": 0,
+        "quyencuoc": 0,
+        "dongDeu": 0,
+        "ngheThuat": 0,
+        "tacPhong": 0
+      },
+      "thoiGian": "2025-04-15T17:07:57.966Z"
+    },
+    {
+      "id": 1744743408977,
+      "nguoiCham": "Giám định 2",
+      "doi": "Captain Kids",
+      "chiTiet": {
+        "kyThuat": 0,
+        "quyencuoc": 0,
+        "dongDeu": 0,
+        "ngheThuat": 0,
+        "tacPhong": 0
+      },
+      "thoiGian": "2025-04-15T18:56:48.977Z"
+    },
+    {
+      "id": 1744743518243,
+      "nguoiCham": "Giám định 3",
+      "doi": "Captain Kids",
+      "chiTiet": {
+        "kyThuat": 0,
+        "quyencuoc": 0,
+        "dongDeu": 0,
+        "ngheThuat": 0,
+        "tacPhong": 0
+      },
+      "thoiGian": "2025-04-15T18:58:38.243Z"
+    },
+    {
+      "id": 1744736928007,
+      "nguoiCham": "Giám định 1",
+      "doi": "Vovinam Sakura Kids Star 2",
+      "chiTiet": {
+        "kyThuat": 0,
+        "quyencuoc": 0,
+        "dongDeu": 0,
+        "ngheThuat": 0,
+        "tacPhong": 0
+      },
+      "thoiGian": "2025-04-15T17:08:48.007Z"
+    },
+    {
+      "id": 1744736955791,
+      "nguoiCham": "Giám định 2",
+      "doi": "Vovinam Sakura Kids Star 2",
+      "chiTiet": {
+        "kyThuat": 0,
+        "quyencuoc": 0,
+        "dongDeu": 0,
+        "ngheThuat": 0,
+        "tacPhong": 0
+      },
+      "thoiGian": "2025-04-15T17:09:15.791Z"
+    },
+    {
+      "id": 1744736959373,
+      "nguoiCham": "Giám định 3",
+      "doi": "Vovinam Sakura Kids Star 2",
+      "chiTiet": {
+        "kyThuat": 0,
+        "quyencuoc": 0,
+        "dongDeu": 0,
+        "ngheThuat": 0,
+        "tacPhong": 0
+      },
+      "thoiGian": "2025-04-15T17:09:19.373Z"
+    },
+    {
+      "id": 1744737131395,
+      "nguoiCham": "Giám định 1",
+      "doi": "Vovinam Hoài Đức Beauty Academy (VHDBA)",
+      "chiTiet": {
+        "kyThuat": 0,
+        "quyencuoc": 0,
+        "dongDeu": 0,
+        "ngheThuat": 0,
+        "tacPhong": 0
+      },
+      "thoiGian": "2025-04-15T17:12:11.395Z"
+    },
+    {
+      "id": 1744737135777,
+      "nguoiCham": "Giám định 2",
+      "doi": "Vovinam Hoài Đức Beauty Academy (VHDBA)",
+      "chiTiet": {
+        "kyThuat": 0,
+        "quyencuoc": 0,
+        "dongDeu": 0,
+        "ngheThuat": 0,
+        "tacPhong": 0
+      },
+      "thoiGian": "2025-04-15T17:12:15.777Z"
+    },
+    {
+      "id": 1744737139575,
+      "nguoiCham": "Giám định 3",
+      "doi": "Vovinam Hoài Đức Beauty Academy (VHDBA)",
+      "chiTiet": {
+        "kyThuat": 0,
+        "quyencuoc": 0,
+        "dongDeu": 0,
+        "ngheThuat": 0,
+        "tacPhong": 0
+      },
+      "thoiGian": "2025-04-15T17:12:19.575Z"
+    },
+    {
+      "id": 1744737164671,
+      "nguoiCham": "Giám định 1",
+      "doi": "Vovinam Future Champions (VFC)",
+      "chiTiet": {
+        "kyThuat": 0,
+        "quyencuoc": 0,
+        "dongDeu": 0,
+        "ngheThuat": 0,
+        "tacPhong": 0
+      },
+      "thoiGian": "2025-04-15T17:12:44.671Z"
+    },
+    {
+      "id": 1744737168371,
+      "nguoiCham": "Giám định 2",
+      "doi": "Vovinam Future Champions (VFC)",
+      "chiTiet": {
+        "kyThuat": 0,
+        "quyencuoc": 0,
+        "dongDeu": 0,
+        "ngheThuat": 0,
+        "tacPhong": 0
+      },
+      "thoiGian": "2025-04-15T17:12:48.371Z"
+    },
+    {
+      "id": 1744737172631,
+      "nguoiCham": "Giám định 3",
+      "doi": "Vovinam Future Champions (VFC)",
+      "chiTiet": {
+        "kyThuat": 0,
+        "quyencuoc": 0,
+        "dongDeu": 0,
+        "ngheThuat": 0,
+        "tacPhong": 0
+      },
+      "thoiGian": "2025-04-15T17:12:52.631Z"
+    },
+    {
+      "id": 1744737184839,
+      "nguoiCham": "Giám định 1",
+      "doi": "Hansu Team Kids",
+      "chiTiet": {
+        "kyThuat": 0,
+        "quyencuoc": 0,
+        "dongDeu": 0,
+        "ngheThuat": 0,
+        "tacPhong": 0
+      },
+      "thoiGian": "2025-04-15T17:13:04.839Z"
+    },
+    {
+      "id": 1744737190041,
+      "nguoiCham": "Giám định 2",
+      "doi": "Hansu Team Kids",
+      "chiTiet": {
+        "kyThuat": 0,
+        "quyencuoc": 0,
+        "dongDeu": 0,
+        "ngheThuat": 0,
+        "tacPhong": 0
+      },
+      "thoiGian": "2025-04-15T17:13:10.041Z"
+    },
+    {
+      "id": 1744737194640,
+      "nguoiCham": "Giám định 3",
+      "doi": "Hansu Team Kids",
+      "chiTiet": {
+        "kyThuat": 0,
+        "quyencuoc": 0,
+        "dongDeu": 0,
+        "ngheThuat": 0,
+        "tacPhong": 0
+      },
+      "thoiGian": "2025-04-15T17:13:14.640Z"
+    },
+    {
+      "id": 1744737217837,
+      "nguoiCham": "Giám định 1",
+      "doi": "Little Vovinam Heroes (LVH)",
+      "chiTiet": {
+        "kyThuat": 0,
+        "quyencuoc": 0,
+        "dongDeu": 0,
+        "ngheThuat": 0,
+        "tacPhong": 0
+      },
+      "thoiGian": "2025-04-15T17:13:37.837Z"
+    },
+    {
+      "id": 1744737222027,
+      "nguoiCham": "Giám định 2",
+      "doi": "Little Vovinam Heroes (LVH)",
+      "chiTiet": {
+        "kyThuat": 0,
+        "quyencuoc": 0,
+        "dongDeu": 0,
+        "ngheThuat": 0,
+        "tacPhong": 0
+      },
+      "thoiGian": "2025-04-15T17:13:42.027Z"
+    },
+    {
+      "id": 1744737225246,
+      "nguoiCham": "Giám định 3",
+      "doi": "Little Vovinam Heroes (LVH)",
+      "chiTiet": {
+        "kyThuat": 0,
+        "quyencuoc": 0,
+        "dongDeu": 0,
+        "ngheThuat": 0,
+        "tacPhong": 0
+      },
+      "thoiGian": "2025-04-15T17:13:45.246Z"
+    },
+    {
+      "id": 1744737232252,
+      "nguoiCham": "Giám định 1",
+      "doi": "Vovinam Young Warriors (VYWS)",
+      "chiTiet": {
+        "kyThuat": 0,
+        "quyencuoc": 0,
+        "dongDeu": 0,
+        "ngheThuat": 0,
+        "tacPhong": 0
+      },
+      "thoiGian": "2025-04-15T17:13:52.252Z"
+    },
+    {
+      "id": 1744737237118,
+      "nguoiCham": "Giám định 2",
+      "doi": "Vovinam Young Warriors (VYWS)",
+      "chiTiet": {
+        "kyThuat": 0,
+        "quyencuoc": 0,
+        "dongDeu": 0,
+        "ngheThuat": 0,
+        "tacPhong": 0
+      },
+      "thoiGian": "2025-04-15T17:13:57.118Z"
+    },
+    {
+      "id": 1744737241026,
+      "nguoiCham": "Giám định 3",
+      "doi": "Vovinam Young Warriors (VYWS)",
+      "chiTiet": {
+        "kyThuat": 0,
+        "quyencuoc": 0,
+        "dongDeu": 0,
+        "ngheThuat": 0,
+        "tacPhong": 0
+      },
+      "thoiGian": "2025-04-15T17:14:01.026Z"
+    },
+    {
+      "id": 1744737263496,
+      "nguoiCham": "Giám định 1",
+      "doi": "Spider-kids",
+      "chiTiet": {
+        "kyThuat": 0,
+        "quyencuoc": 0,
+        "dongDeu": 0,
+        "ngheThuat": 0,
+        "tacPhong": 0
+      },
+      "thoiGian": "2025-04-15T17:14:23.496Z"
+    },
+    {
+      "id": 1744737267710,
+      "nguoiCham": "Giám định 2",
+      "doi": "Spider-kids",
+      "chiTiet": {
+        "kyThuat": 0,
+        "quyencuoc": 0,
+        "dongDeu": 0,
+        "ngheThuat": 0,
+        "tacPhong": 0
+      },
+      "thoiGian": "2025-04-15T17:14:27.710Z"
+    },
+    {
+      "id": 1744737271924,
+      "nguoiCham": "Giám định 3",
+      "doi": "Spider-kids",
+      "chiTiet": {
+        "kyThuat": 0,
+        "quyencuoc": 0,
+        "dongDeu": 0,
+        "ngheThuat": 0,
+        "tacPhong": 0
+      },
+      "thoiGian": "2025-04-15T17:14:31.924Z"
+    },
+    {
+      "id": 1744737276057,
+      "nguoiCham": "Giám định 1",
+      "doi": "Sonic Team",
+      "chiTiet": {
+        "kyThuat": 0,
+        "quyencuoc": 0,
+        "dongDeu": 0,
+        "ngheThuat": 0,
+        "tacPhong": 0
+      },
+      "thoiGian": "2025-04-15T17:14:36.057Z"
+    },
+    {
+      "id": 1744737941000,
+      "nguoiCham": "Giám định 2",
+      "doi": "Sonic Team",
+      "chiTiet": {
+        "kyThuat": 0,
+        "quyencuoc": 0,
+        "dongDeu": 0,
+        "ngheThuat": 0,
+        "tacPhong": 0
+      },
+      "thoiGian": "2025-04-15T17:25:41.000Z"
+    },
+    {
+      "id": 1744743554159,
+      "nguoiCham": "Giám định 3",
+      "doi": "Sonic Team",
+      "chiTiet": {
+        "kyThuat": 0,
+        "quyencuoc": 0,
+        "dongDeu": 0,
+        "ngheThuat": 0,
+        "tacPhong": 0
+      },
+      "thoiGian": "2025-04-15T18:59:14.159Z"
+    }
+  ]

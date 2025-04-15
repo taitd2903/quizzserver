@@ -32,11 +32,11 @@ io.on("connection", (socket) => {
 
   socket.on("luuDiem", (data) => {
     const { nguoiCham, doi, chiTiet } = data;
-
+  
     const index = scores.findIndex(
       (d) => d.doi === doi && d.nguoiCham === nguoiCham
     );
-
+  
     const diemMoi = {
       id: Date.now(),
       nguoiCham,
@@ -44,38 +44,40 @@ io.on("connection", (socket) => {
       chiTiet,
       thoiGian: new Date().toISOString(),
     };
+  
     if (index !== -1) {
-      scores[index] = diemMoi; 
+      scores[index] = diemMoi;
     } else {
-      scores.push(diemMoi); 
+      scores.push(diemMoi);
     }
-
+  
     writeScoresToFile(scores);
     console.log("✅ Đã lưu điểm:", diemMoi);
+  
     const diemDoi = scores.filter((d) => d.doi === doi);
-
-
-    if (diemDoi.length === 3) {
-      const tongDiemDoi = diemDoi.reduce((sum, d) => {
-        const diemGiámKhảo = Object.values(d.chiTiet).reduce((acc, val) => acc + val, 0);
-        return sum + diemGiámKhảo;
-      }, 0);
-      io.emit("capNhatDiem", {
-        doi,
-        tongDiem: tongDiemDoi,
-        chiTiet: diemDoi, 
-      });
-      console.log(`🎉 Đội ${doi} đã đủ 3 người chấm! Tổng điểm: ${tongDiemDoi}`);
-    } else {
-      const diemGiámKhảo = Object.values(diemMoi.chiTiet).reduce((acc, val) => acc + val, 0);
-      io.emit("capNhatDiemGiámKhảo", {
-        nguoiCham: diemMoi.nguoiCham,
-        doi,
-        tongDiem: diemGiámKhảo,
-        chiTiet: diemMoi.chiTiet,
-      });
-    }
+  
+    // Luôn gửi tổng điểm cập nhật, dù mới có 1-2 người chấm
+    const tongDiemDoi = diemDoi.reduce((sum, d) => {
+      const diemGiámKhảo = Object.values(d.chiTiet).reduce((acc, val) => acc + val, 0);
+      return sum + diemGiámKhảo;
+    }, 0);
+  
+    io.emit("capNhatDiem", {
+      doi,
+      tongDiem: tongDiemDoi,
+      chiTiet: diemDoi, // nếu cần thông tin từng người chấm
+    });
+  
+    // Gửi riêng điểm của giám khảo vừa chấm (nếu frontend cần)
+    const diemGiámKhảo = Object.values(diemMoi.chiTiet).reduce((acc, val) => acc + val, 0);
+    io.emit("capNhatDiemGiámKhảo", {
+      nguoiCham: diemMoi.nguoiCham,
+      doi,
+      tongDiem: diemGiámKhảo,
+      chiTiet: diemMoi.chiTiet,
+    });
   });
+  
 
   socket.on("layDanhSachDiem", () => {
     socket.emit("danhSachDiem", scores);
