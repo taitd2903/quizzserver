@@ -6,167 +6,98 @@ const path = require("path");
 const cors = require("cors");
 
 const app = express();
-const server = http.createServer(app); 
+const server = http.createServer(app);
 const io = new Server(server, {
   cors: { origin: "*", methods: ["GET", "POST"] },
 });
 
 app.use(cors());
 
-// Đọc danh sách câu hỏi
-const questions = JSON.parse(
-  fs.readFileSync(path.join(__dirname, "questions.json"), "utf8")
-);
-
-// Đọc và ghi dữ liệu người chơi
-const filePath = path.join(__dirname, "players.json");
-const readPlayersFromFile = () => {
+const filePath = path.join(__dirname, "scores.json");
+const readScoresFromFile = () => {
   if (!fs.existsSync(filePath)) {
     fs.writeFileSync(filePath, "[]", "utf8");
     return [];
   }
   return JSON.parse(fs.readFileSync(filePath, "utf8"));
 };
-
-const writePlayersToFile = (players) => {
-  fs.writeFileSync(filePath, JSON.stringify(players, null, 2), "utf8");
+const writeScoresToFile = (scores) => {
+  fs.writeFileSync(filePath, JSON.stringify(scores, null, 2), "utf8");
 };
 
-let players = readPlayersFromFile();
-let questionIndex = 0;
-let pendingAnswers = {};
-let questionStartTime = Date.now();
+let scores = readScoresFromFile();
 
 io.on("connection", (socket) => {
-  console.log("⚡ Người chơi kết nối:", socket.id);
+  console.log("👨‍⚖️ Người chấm kết nối:", socket.id);
 
-  // Người chơi tham gia vào hệ thống
-  socket.on("join", ({ name, avatar }) => {
-    players.push({ id: socket.id, name, avatar, score: 0, totalTime: 0 });
-    writePlayersToFile(players);
-    io.emit("players", players);
-  });
+  socket.on("luuDiem", (data) => {
+    const { nguoiCham, doi, chiTiet } = data;
 
+    const index = scores.findIndex(
+      (d) => d.doi === doi && d.nguoiCham === nguoiCham
+    );
 
-  socket.on("startGame", () => {
-    questionIndex = 0;
-    questionStartTime = Date.now();
-    const question = questions[questionIndex];
-    const isFillIn = !question.options || question.options.length === 0;
-    io.emit("startGame", { 
-        question: question.question, 
-        options: question.options, 
-        image: question.image || null, 
-        audio: question.audio || null ,
-        video: question.video || null ,
-        type: isFillIn ? "fill" : "multiple" 
-    });
-
-
-  });
-
-  socket.on("answer", ({ name, answer }) => {
-    const currentTime = Date.now() - questionStartTime;
-
-    if (!pendingAnswers[name]) {
-      pendingAnswers[name] = { answer, time: currentTime };
+    const diemMoi = {
+      id: Date.now(),
+      nguoiCham,
+      doi,
+      chiTiet,
+      thoiGian: new Date().toISOString(),
+    };
+    if (index !== -1) {
+      scores[index] = diemMoi; 
     } else {
-      pendingAnswers[name].answer = answer;
-      pendingAnswers[name].time = currentTime;
+      scores.push(diemMoi); 
+    }
+
+    writeScoresToFile(scores);
+    console.log("✅ Đã lưu điểm:", diemMoi);
+    const diemDoi = scores.filter((d) => d.doi === doi);
+
+
+    if (diemDoi.length === 3) {
+      const tongDiemDoi = diemDoi.reduce((sum, d) => {
+        const diemGiámKhảo = Object.values(d.chiTiet).reduce((acc, val) => acc + val, 0);
+        return sum + diemGiámKhảo;
+      }, 0);
+      io.emit("capNhatDiem", {
+        doi,
+        tongDiem: tongDiemDoi,
+        chiTiet: diemDoi, 
+      });
+      console.log(`🎉 Đội ${doi} đã đủ 3 người chấm! Tổng điểm: ${tongDiemDoi}`);
+    } else {
+      const diemGiámKhảo = Object.values(diemMoi.chiTiet).reduce((acc, val) => acc + val, 0);
+      io.emit("capNhatDiemGiámKhảo", {
+        nguoiCham: diemMoi.nguoiCham,
+        doi,
+        tongDiem: diemGiámKhảo,
+        chiTiet: diemMoi.chiTiet,
+      });
     }
   });
 
-  socket.on("nextQuestion", () => {
-    let totalCorrect = 0;
-    let totalWrong = 0;
-    let playerAnswers = [];  
-    const question = questions[questionIndex];
-    const correctAnswer = (question.correct || "").trim().toLowerCase();
-    const isFillIn = !question.options || question.options.length === 0;
-
-    players.forEach((player) => {
-        let playerAnswer = pendingAnswers[player.name]?.answer || "Không trả lời"; // Lấy câu trả lời hoặc ghi nhận "Không trả lời"
-
-        playerAnswers.push({
-            name: player.name,
-            answer: playerAnswer
-        });
-
-        if (
-          isFillIn
-          ? playerAnswer.trim().toLowerCase() === correctAnswer
-          : playerAnswer === correctAnswer
-        ) {
-            player.score += 10;
-            player.totalTime = (player.totalTime || 0) + pendingAnswers[player.name].time;
-            totalCorrect++;
-        } else {
-            totalWrong++;
-        }
-    });
-
-    writePlayersToFile(players);
-    io.emit("players", players);
-
-    // Gửi thống kê cùng với câu trả lời đúng và câu trả lời của từng người chơi
-    io.emit("questionStats", { 
-        totalCorrect, 
-        totalWrong, 
-        correctAnswer, 
-        playerAnswers 
-    });
-
-    pendingAnswers = {};
-
-    if (questionIndex < questions.length - 1) {
-      questionIndex++;
-      questionStartTime = Date.now();
-      const nextQ = questions[questionIndex];
-      const isFillIn = !nextQ.options || nextQ.options.length === 0;
-      // Gửi câu hỏi tiếp theo
-      io.emit("nextQuestion", { 
-          question: questions[questionIndex].question, 
-          options: questions[questionIndex].options ,
-          image: questions[questionIndex].image || "", 
-          audio: questions[questionIndex].audio || "" ,
-          video: questions[questionIndex].video || ""  ,
-          type: isFillIn ? "fill" : "multiple"
-      });
-  } else {
-      // Kết thúc quiz
-      const topPlayers = [...players]
-          .sort((a, b) => b.score - a.score || a.totalTime - b.totalTime)
-          .slice(0, 3);
-  
-      io.emit("finish", { topPlayers });
-  }
-  
-});
-
-  // Reset lại game
-  socket.on("resetGame", () => {
-    players = [];
-    writePlayersToFile(players);
-    questionIndex = 0;
-    io.emit("resetGame");
-    io.emit("players", players);
+  socket.on("layDanhSachDiem", () => {
+    socket.emit("danhSachDiem", scores);
   });
 
-  // Khi người chơi rời khỏi
+  socket.on("resetDiem", () => {
+    scores = [];
+    writeScoresToFile(scores);
+    io.emit("danhSachDiem", scores);
+    console.log("🗑️ Đã reset toàn bộ điểm.");
+  });
+
   socket.on("disconnect", () => {
-    players = players.filter((p) => p.id !== socket.id);
-    writePlayersToFile(players);
-    io.emit("players", players);
+    console.log("❌ Người chấm ngắt kết nối:", socket.id);
   });
 });
 
-// Endpoint để kiểm tra server đang chạy
 app.get("/", (req, res) => {
-  res.send("🚀 Quiz Server is Running!");
+  res.send("🧮 Scoring Server is Running!");
 });
 
-// Lắng nghe cổng do Render cấp
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 4000;
 server.listen(PORT, () => {
-  console.log(`🚀 Server chạy trên cổng ${PORT}`);
+  console.log(`🧮 Scoring Server chạy tại http://localhost:${PORT}`);
 });
